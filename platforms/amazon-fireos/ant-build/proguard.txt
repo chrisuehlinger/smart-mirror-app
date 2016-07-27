@@ -1,0 +1,21 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.uehreka.mirror.UehrekaMirror { <init>(...); }
+
+# view AndroidManifest.xml #generated:13
+-keep class org.chromium.content.app.SandboxedProcessService0 { <init>(...); }
+
+# view AndroidManifest.xml #generated:14
+-keep class org.chromium.content.app.SandboxedProcessService1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:15
+-keep class org.chromium.content.app.SandboxedProcessService2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:16
+-keep class org.chromium.content.app.SandboxedProcessService3 { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class org.chromium.content.app.SandboxedProcessService4 { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class org.chromium.content.app.SandboxedProcessService5 { <init>(...); }
+
