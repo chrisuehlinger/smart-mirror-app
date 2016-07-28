@@ -68,8 +68,9 @@ function socketStuff() {
     });
     
     socket.on('hn-topstories', function(data) {
-        data = decodeURIComponent(data);
-        alert(data);
+        data = JSON.parse(decodeURIComponent(data));
+        console.log(data);
+        displayTopStories(data);
     });
     
     socket.on('hn-topcomment', function(data) {
