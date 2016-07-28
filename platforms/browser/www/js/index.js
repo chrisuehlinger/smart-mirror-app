@@ -74,7 +74,8 @@ function socketStuff() {
     });
     
     socket.on('hn-topcomment', function(data) {
-        data = decodeURIComponent(data);
-        alert(data);
+        data = JSON.parse(decodeURIComponent(data));
+        console.log(data);
+        displayTopComment(data);
     });
 }

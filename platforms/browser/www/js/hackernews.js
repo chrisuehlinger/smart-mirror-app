@@ -16,3 +16,12 @@ window.displayTopStories = function(data) {
 
     $('body').append($stories);
 }
+
+window.displayTopComment = function(data) {
+    var $commentSection = $('<div class="hn-top-comment"></div>');
+
+    $commentSection.append('<h2>' + data.story.title + '</h2>');
+    $commentSection.append('<p>' + data.comment.text + '</p>');
+
+    $('body').append($commentSection);
+}

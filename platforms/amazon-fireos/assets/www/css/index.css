@@ -113,3 +113,18 @@ body {
   content: " - ";
   margin-left: 5px;
 }
+
+.hn-top-comment {
+  text-align: left;
+  margin: 0 50px;
+  text-transform: none;
+  line-height: 1.5;
+}
+
+.hn-top-comment h2 {
+  font-size: 24px;
+}
+
+.hn-top-comment p{
+  font-size: 18px;
+}
