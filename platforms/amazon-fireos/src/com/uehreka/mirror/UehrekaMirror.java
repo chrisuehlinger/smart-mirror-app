@@ -20,6 +20,7 @@
 package com.uehreka.mirror;
 
 import android.os.Bundle;
+import android.view.View;
 import org.apache.cordova.*;
 
 public class UehrekaMirror extends CordovaActivity
@@ -29,7 +30,7 @@ public class UehrekaMirror extends CordovaActivity
     {
         super.onCreate(savedInstanceState);
         super.init();
-        
+
         /* Check to make sure Amazon WebView library loaded correctly.
          * For more information, see the Cordova Amazon Fire OS Platform Guide:
          * http://cordova.apache.org/docs/en/edge/guide_platforms_amazonfireos_index.md.html
@@ -37,9 +38,23 @@ public class UehrekaMirror extends CordovaActivity
         if (this.appView != null) {
             // Set by <content src="index.html" /> in config.xml
             loadUrl(launchUrl);
-
         }
-       
 
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 }

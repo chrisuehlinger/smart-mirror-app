@@ -14,7 +14,10 @@ window.displayTopStories = function(data) {
         $stories.append($story);
     });
 
-    $('body').append($stories);
+    $('.display-area').fadeOut(500, function(){
+        $('.display-area').html($stories);
+        $('.display-area').fadeIn(500);
+    });
 }
 
 window.displayTopComment = function(data) {
@@ -23,5 +26,9 @@ window.displayTopComment = function(data) {
     $commentSection.append('<h2>' + data.story.title + '</h2>');
     $commentSection.append('<p>' + data.comment.text + '</p>');
 
-    $('body').append($commentSection);
+    $('.display-area').fadeOut(500, function(){
+        $('.display-area').html($commentSection);
+        $('.display-area').fadeIn(500);
+    });
+    
 }

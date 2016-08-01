@@ -62,10 +62,15 @@ body {
   fill: #fff;
 }
 
+.display-area {
+  margin: 0 auto;
+}
+
 .hn-top-stories {
     text-align: left;
     margin: 0 50px;
     text-transform: none;
+    padding-left: 0px;
 }
 
 .hn-top-stories li {
@@ -127,4 +132,9 @@ body {
 
 .hn-top-comment p{
   font-size: 18px;
+}
+
+svg {    
+  margin: 0 auto;
+  display: block;
 }

@@ -31,11 +31,15 @@
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/res \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/spec \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/spec.html \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/css/font.css \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/css/index.css \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/fonts/S5P2Ny-Dw8BHKH0UfdbgXaE8kM4xWR1_1bYURRojRGc.woff2 \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/fonts/S5P2Ny-Dw8BHKH0UfdbgXYgp9Q8gbYrhqGlRav_IXfk.woff2 \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/img/logo.png \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/js/hackernews.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/js/index.js \
-/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/js/moment.js \
-/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/js/socket.io.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/js/weather.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/res/icon \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/res/screen \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/res/icon/android \
@@ -116,4 +120,9 @@
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/spec/lib/jasmine-1.2.0/jasmine.css \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/spec/lib/jasmine-1.2.0/jasmine.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/spec/lib/jasmine-1.2.0/MIT.LICENSE \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/d3.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/jquery.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/lodash.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/moment.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/socket.io.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/ant-build/AndroidManifest.xml \
