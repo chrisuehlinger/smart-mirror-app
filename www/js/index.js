@@ -39,14 +39,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        socket = io.connect('https://infinite-sea-77086.herokuapp.com/');
-        // socket = io.connect('http://localhost:3001/');
-        socket.on('connect', socketStuff);
+        
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-
+        socketConnect();
         console.log('Received Event: ' + id);
         this.tick();
         setInterval(this.tick.bind(this),100);
@@ -55,6 +53,12 @@ var app = {
         document.querySelector('.current-time').innerText = moment().format('h:mm a');
     }
 };
+
+function socketConnect(){
+    socket = io.connect('https://infinite-sea-77086.herokuapp.com/');
+    // socket = io.connect('http://localhost:3001/');
+    socket.on('connect', socketStuff);
+}
 
 function socketStuff() {
     socket.on('text', function(data) {
@@ -83,4 +87,6 @@ function socketStuff() {
         console.log(data);
         displayTopComment(data);
     });
+
+    socket.on('disconnect', socketConnect);
 }
