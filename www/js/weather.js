@@ -1,4 +1,6 @@
-window.displayWeather = function(data) {
+window.displayWeather = _.debounce(_displayWeather, 1000, {leading: true});
+
+function _displayWeather(data) {
     data = data.map(type);
 
     var margin = {top: 20, right: 20, bottom: 30, left: 50},

@@ -1,4 +1,7 @@
-window.displayTopStories = function(data) {
+window.displayTopStories = _.debounce(_displayTopStories, 1000, {leading: true});
+window.displayTopComment = _.debounce(_displayTopComment, 1000, {leading: true});
+
+function _displayTopStories(data) {
     var $stories = $('<ol class="hn-top-stories"></ol>');
 
     data.forEach(function(story, i) {
@@ -20,7 +23,7 @@ window.displayTopStories = function(data) {
     });
 }
 
-window.displayTopComment = function(data) {
+function _displayTopComment(data) {
     var $commentSection = $('<div class="hn-top-comment"></div>');
 
     $commentSection.append('<h2>' + data.story.title + '</h2>');

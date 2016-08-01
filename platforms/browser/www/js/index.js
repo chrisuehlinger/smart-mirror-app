@@ -61,10 +61,15 @@ function socketStuff() {
         console.log('socket connected');
     });
     
+    socket.on('clear-screen', function() {
+        console.log('Clearing screen...');
+        $('.display-area').fadeOut(500);
+    });
+    
     socket.on('weather', function(data) {
         data = JSON.parse(decodeURIComponent(data));
         console.log(data);
-        _.debounce(displayWeather)(data.hourly.data.slice(0,24));
+        displayWeather(data.hourly.data.slice(0,24));
     });
     
     socket.on('hn-topstories', function(data) {
