@@ -43,22 +43,31 @@ function _displayWeather(data) {
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .call(xAxis)
+            .style("opacity", 0)
+            .transition()
+            .duration(500)
+            .style("opacity", 1);
 
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("% Precip");
+            .style("opacity", 0)
+            .transition()
+            .duration(500)
+            .style("opacity", 1);
 
         svg.append("path")
             .datum(data)
             .attr("class", "line")
-            .attr("d", line);
+            .attr("d", line)
+            .each(function(d) { d.totalLength = this.getTotalLength(); })
+            .attr("stroke-dasharray", function(d) { return d.totalLength + " " + d.totalLength; })
+            .attr("stroke-dashoffset", function(d) { return d.totalLength; })
+            .transition()
+            .delay(500)
+            .duration(1000)
+            .attr("stroke-dashoffset", 0);
     });
 
     function type(d) {
