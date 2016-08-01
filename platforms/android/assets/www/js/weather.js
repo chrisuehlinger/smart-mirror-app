@@ -1,7 +1,7 @@
 window.displayWeather = _.debounce(_displayWeather, 1000, {leading: true});
 
-function _displayWeather(data) {
-    data = data.map(type);
+function _displayWeather(allData) {
+    var data = allData.hourly.data.slice(0,24).map(type);
 
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 500 - margin.left - margin.right,
@@ -32,6 +32,19 @@ function _displayWeather(data) {
     
     $('.display-area').fadeOut(500,function(){
         $('.display-area').html('').show();
+        
+        var $currentConditions = $('<div class="current-conditions" style="display:none"></div>');
+        $currentConditions.append('<span class="temperature">' + Math.round(allData.currently.temperature) + '&#176;F</span>');
+        $currentConditions.append('<canvas id="skycon" width="128" height="128"></canvas');
+        $('.display-area').append($currentConditions);
+        $currentConditions.fadeIn(500);
+
+        var skycons = new Skycons({color: 'white', resizeClear:true});
+
+        skycons.add('skycon', allData.currently.icon);
+        skycons.play();
+
+
         var svg = d3.select(".display-area").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)

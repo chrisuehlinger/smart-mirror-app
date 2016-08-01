@@ -69,7 +69,7 @@ function socketStuff() {
     socket.on('weather', function(data) {
         data = JSON.parse(decodeURIComponent(data));
         console.log(data);
-        displayWeather(data.hourly.data.slice(0,24));
+        displayWeather(data);
     });
     
     socket.on('hn-topstories', function(data) {
