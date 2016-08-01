@@ -124,5 +124,6 @@
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/jquery.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/lodash.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/moment.js \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/skycons.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/vendor/socket.io.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/ant-build/AndroidManifest.xml \
