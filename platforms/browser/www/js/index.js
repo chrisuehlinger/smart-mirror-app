@@ -39,7 +39,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        
+        // admRegister();
+        socketConnect();
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -88,5 +89,26 @@ function socketStuff() {
         displayTopComment(data);
     });
 
-    socket.on('disconnect', socketConnect);
+    socket.on('disconnect', function(){
+        alert('socket disconnected');
+        socketConnect();
+    });
+}
+
+var pushNotification;
+function admRegister(){
+    pushNotification = window.plugins.pushNotification;
+    if(device.platform === 'amazon-fireos'){
+        pushNotification.register(registerSuccess, registerError, {
+            ecb:'onNotification'
+        });
+    }
+}
+
+function registerSuccess(result){
+
+}
+
+function registerError(error) {
+    alert(error);
 }

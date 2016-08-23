@@ -1,21 +1,30 @@
-# view AndroidManifest.xml #generated:6
+# view AndroidManifest.xml #generated:25
+-keep class com.amazon.cordova.plugin.ADMHandlerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class com.amazon.cordova.plugin.ADMMessageHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:26
+-keep class com.amazon.cordova.plugin.ADMMessageHandler$Receiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:10
 -keep class com.uehreka.mirror.UehrekaMirror { <init>(...); }
 
-# view AndroidManifest.xml #generated:13
+# view AndroidManifest.xml #generated:17
 -keep class org.chromium.content.app.SandboxedProcessService0 { <init>(...); }
 
-# view AndroidManifest.xml #generated:14
+# view AndroidManifest.xml #generated:18
 -keep class org.chromium.content.app.SandboxedProcessService1 { <init>(...); }
 
-# view AndroidManifest.xml #generated:15
+# view AndroidManifest.xml #generated:19
 -keep class org.chromium.content.app.SandboxedProcessService2 { <init>(...); }
 
-# view AndroidManifest.xml #generated:16
+# view AndroidManifest.xml #generated:20
 -keep class org.chromium.content.app.SandboxedProcessService3 { <init>(...); }
 
-# view AndroidManifest.xml #generated:17
+# view AndroidManifest.xml #generated:21
 -keep class org.chromium.content.app.SandboxedProcessService4 { <init>(...); }
 
-# view AndroidManifest.xml #generated:18
+# view AndroidManifest.xml #generated:22
 -keep class org.chromium.content.app.SandboxedProcessService5 { <init>(...); }
 

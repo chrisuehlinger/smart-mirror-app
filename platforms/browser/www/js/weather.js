@@ -1,4 +1,4 @@
-window.displayWeather = _.debounce(_displayWeather, 1000, {leading: true});
+window.displayWeather = _.debounce(_displayWeather, 5000, {leading: true, trailing: false});
 
 function _displayWeather(allData) {
     var data = allData.hourly.data.slice(0,24).map(type);

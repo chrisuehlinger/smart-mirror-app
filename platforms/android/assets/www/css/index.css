@@ -87,7 +87,7 @@ body {
   background: #fff;
   color: #000;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   justify-content: center;
   align-items: center;
@@ -103,7 +103,7 @@ body {
 .hn-top-stories .story-title {
   display: block;
   white-space: normal;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .hn-top-stories .story-comments {

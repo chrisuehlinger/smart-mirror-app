@@ -19,6 +19,7 @@
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/ant-build/res/drawable-port-ldpi/screen.png \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/ant-build/res/drawable-port-mdpi/screen.png \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/ant-build/res/drawable-port-xhdpi/screen.png \
+/Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/api_key.txt \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/cordova.js \
 /Users/Chris/Development/smart-mirror/smart-mirror-app/platforms/amazon-fireos/assets/www/cordova_plugins.js \

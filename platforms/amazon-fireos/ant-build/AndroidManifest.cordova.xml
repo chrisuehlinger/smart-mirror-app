@@ -2,6 +2,10 @@
 <manifest android:hardwareAccelerated="true" android:versionCode="10001" android:versionName="1.0.1" package="com.uehreka.mirror" xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="com.uehreka.mirror.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.uehreka.mirror.permission.RECEIVE_ADM_MESSAGE" />
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="UehrekaMirror" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/launcher_name">
@@ -16,6 +20,16 @@
         <service android:exported="false" android:name="org.chromium.content.app.SandboxedProcessService3" android:permission="org.chromium.content_shell.permission.SANDBOX" android:process=":sandboxed_process3" />
         <service android:exported="false" android:name="org.chromium.content.app.SandboxedProcessService4" android:permission="org.chromium.content_shell.permission.SANDBOX" android:process=":sandboxed_process4" />
         <service android:exported="false" android:name="org.chromium.content.app.SandboxedProcessService5" android:permission="org.chromium.content_shell.permission.SANDBOX" android:process=":sandboxed_process5" />
+        <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="true" />
+        <service android:exported="false" android:name="com.amazon.cordova.plugin.ADMMessageHandler" />
+        <activity android:name="com.amazon.cordova.plugin.ADMHandlerActivity" />
+        <receiver android:name="com.amazon.cordova.plugin.ADMMessageHandler$Receiver" android:permission="com.amazon.device.messaging.permission.SEND">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+                <category android:name="com.uehreka.mirror" />
+            </intent-filter>
+        </receiver>
     </application>
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 </manifest>

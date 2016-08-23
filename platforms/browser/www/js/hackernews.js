@@ -1,5 +1,5 @@
-window.displayTopStories = _.debounce(_displayTopStories, 1000, {leading: true});
-window.displayTopComment = _.debounce(_displayTopComment, 1000, {leading: true});
+window.displayTopStories = _.debounce(_displayTopStories, 1000, {leading: true, trailing: false});
+window.displayTopComment = _.debounce(_displayTopComment, 1000, {leading: true, trailing: false});
 
 function _displayTopStories(data) {
     var $stories = $('<ol class="hn-top-stories"></ol>');
