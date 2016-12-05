@@ -9,7 +9,8 @@
     </author>
     <content src="index.html" />
     <icon src="icon.png" />
-    <access origin="infinite-sea-77086.herokuapp.com/*" />
+    <access origin="localhost:3001/*" />
+    <access origin="https://*.herokuapp.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

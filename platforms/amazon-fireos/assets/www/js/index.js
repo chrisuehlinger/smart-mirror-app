@@ -114,3 +114,5 @@ function registerSuccess(result){
 function registerError(error) {
     alert(error);
 }
+
+app.initialize();

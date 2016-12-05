@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.uehreka.mirror" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <preference name="loglevel" value="DEBUG" />
     <feature name="Battery">
         <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
     </feature>
@@ -62,6 +61,23 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <name>Uehreka Mirror</name>
+    <description>
+        Hello World sample application that responds to the deviceready event.
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <icon src="icon.png" />
+    <access origin="localhost:3001/*" />
+    <access origin="https://*.herokuapp.com/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
     <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
     <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
@@ -81,22 +97,7 @@
     <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     <allow-intent href="market:*" />
-    <name>Uehreka Mirror</name>
-    <description>
-        Hello World sample application that responds to the deviceready event.
-    </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
-    </author>
-    <content src="index.html" />
+    <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <icon src="icon.png" />
-    <access origin="infinite-sea-77086.herokuapp.com/*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
 </widget>

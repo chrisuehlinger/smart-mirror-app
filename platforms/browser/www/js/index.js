@@ -62,6 +62,7 @@ function socketConnect(){
 }
 
 function socketStuff() {
+    $('.disconnect-notice').hide();
     socket.on('text', function(data) {
         console.log('socket connected');
     });
@@ -90,8 +91,9 @@ function socketStuff() {
     });
 
     socket.on('disconnect', function(){
-        alert('socket disconnected');
-        socketConnect();
+        // alert('socket disconnected');
+        $('.disconnect-notice').show();
+        setTimeout(socketConnect, 1000);
     });
 }
 
@@ -112,3 +114,5 @@ function registerSuccess(result){
 function registerError(error) {
     alert(error);
 }
+
+app.initialize();
