@@ -101,8 +101,8 @@
         <icon height="360" platform="windows" src="www/res/icon/windows/Wide310x150Logo.scale-240.png" width="744" />
         <splash height="1920" platform="windows" src="www/res/screen/windows/SplashScreenPhone.scale-240.png" width="1152" />
     </platform>
-    <!--<access origin="localhost:3001/*" />-->
-    <access origin="infinite-sea-77086.herokuapp.com/*" />
+    <access origin="localhost:3001/*" />
+    <access origin="https://*.herokuapp.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

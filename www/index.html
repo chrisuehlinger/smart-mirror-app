@@ -37,29 +37,61 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <!--<link href="css/font.css" type="text/css" rel="stylesheet">-->
-    <link rel="stylesheet" type="text/css" href="https://infinite-sea-77086.herokuapp.com/css/index.css" />
+    
+    <script type="text/javascript">
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            var string = msg.toLowerCase();
+            var substring = "script error";
+            if (string.indexOf(substring) > -1){
+                // alert('Script Error: See Browser Console for Detail');
+            } else {
+                var message = [
+                    'Message: ' + msg,
+                    'URL: ' + url,
+                    'Line: ' + lineNo,
+                    'Column: ' + columnNo,
+                    'Error object: ' + JSON.stringify(error)
+                ].join(' - ');
+
+                // alert(message);
+            }
+
+            setTimeout(function(){
+                location.reload();
+            }, 10000);
+
+            return false;
+        }
+    </script>
     <title>Smart Mirror</title>
 </head>
 
-<body>
+<body style="background:black">
     <div class="app">
         <div class="current-time"></div>
         <div class="disconnect-notice" style="display:none">DISCONNECTED</div>
         <div class="display-area"></div>
-    </div>
+    </div>    
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/moment.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/socket.io.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/jquery.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/d3.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/lodash.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/vendor/skycons.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/js/weather.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/js/hackernews.js"></script>
-    <script type="text/javascript" src="https://infinite-sea-77086.herokuapp.com/js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
+    <link rel="stylesheet" type="text/css" href="http://localhost:3001/css/app.css" />
+    <script type="text/javascript" src="http://localhost:3001/vendor/moment.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/vendor/socket.io.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/vendor/jquery.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/vendor/d3.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/vendor/lodash.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/vendor/skycons.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/js/weather.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/js/hackernews.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/js/ping.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/js/index.js"></script>
+    <script>
+        if(!window.app){
+            setTimeout(function(){
+                location.reload();
+            }, 1000);
+        }
     </script>
+
 </body>
 
 </html>
